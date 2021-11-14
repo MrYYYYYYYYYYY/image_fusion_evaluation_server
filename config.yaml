@@ -1,0 +1,45 @@
+task:
+  multi-focus:
+    dataset:
+      lytro:
+        root: ./dataset/multi-focus/lytro
+        ifmulti: 0
+        double:
+          data: [lytro-001,lytro-002,lytro-003,lytro-004,lytro-005,
+                 lytro-006,lytro-007,lytro-008,lytro-009,lytro-010,
+                 lytro-011,lytro-012,lytro-013,lytro-014,lytro-015,
+                 lytro-016,lytro-017,lytro-018,lytro-019,lytro-020]
+          suffix: [-001.png, -002.png]
+    metrics: [ 'qmi', 'qte', 'qncie','qg']
+    #metrics: [ 'qmi', 'qte', 'qncie','qg', 'qm', 'qsf', 'qp','qs', 'qc', 'qy','qcv',
+    #             'viff','mef_ssim','ssim_a','fmi_edge', 'fmi_dct', 'fmi_w','nabf','scd','sd','sf', 'cc' ]
+
+  multi-exposure:
+    dataset:
+      mef:
+        root: ./dataset/multi-exposure/mef
+        iftrip: 0
+        double:
+          data: [cave, chairs, door, dragon]
+          suffix: [-A.png, -B.png]
+    metrics: [ 'qmi', 'qte', 'qncie','qg']
+    #metrics: [ 'qmi', 'qte', 'qncie','qg', 'qm', 'qsf', 'qp','qs', 'qc', 'qy','qcv',
+    #           'viff','mef_ssim','ssim_a','fmi_edge', 'fmi_dct', 'fmi_w','nabf','scd','sd','sf', 'cc' ]
+  vis-ir:
+    dataset:
+      roadscene:
+        root: ./dataset/vis-ir/roadscene
+        iftrip: 0
+        double:
+            data:
+              - FLIR_00006
+              - FLIR_00018
+              - FLIR_00060
+              - FLIR_00122
+            #vi->-A.png  ir->-B.png   
+            suffix: [-A.png, -B.png]
+    metrics: [ 'qmi', 'qte', 'qncie','qg']
+    #metrics: [ 'qmi', 'qte', 'qncie','qg', 'qm', 'qsf', 'qp','qs', 'qc', 'qy','qcv',
+    #           'viff','mef_ssim','ssim_a','fmi_edge', 'fmi_dct', 'fmi_w','nabf','scd','sd','sf', 'cc' ]
+
+call_back_url: 'http://49.233.180.165/fusion/c/submit/getEvaluateResultCallBack'
