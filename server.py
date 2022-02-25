@@ -18,7 +18,7 @@ import traceback
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, Executor
 
 with open(os.path.join(os.path.split(__file__)[0], 'config.yaml'), encoding='utf-8') as f:
-    config = yaml.load(f)
+    config = yaml.full_load(f)
 
 app = Flask(__name__)
 

@@ -242,7 +242,7 @@ task:
         suffix: .png
 
       mefb:
-        root:
+        root: ./dataset/multi-exposure/mefb
         double:
           data:
             - mefb-002
