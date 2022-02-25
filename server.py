@@ -65,7 +65,7 @@ def evaluation(data, eva):
         suffix = data_conf['double']['suffix']
         for img_name in imgs:
             print(img_name)
-            pdb.set_trace()
+            #pdb.set_trace()
             fused_result = requests.get(data['fused_result'][img_name]).content
             #fused_result = base64.b64decode(data['fused_result'][img_name].encode())
             fused = np.frombuffer(fused_result,np.uint8)
