@@ -13,6 +13,12 @@ class MatlabEngine():
         self.matlab_engine.addpath(os.path.join(project_address, 'evaluation_methods'))
         self.matlab_engine.addpath(os.path.join(project_address, 'evaluation_methods', "matlabPyrTools"))
 
+    def start_matlab_engine(self):
+        self.matlab_engine = matlab.engine.start_matlab()
+    
+    def quit_matlab_engine(self):
+        self.matlab_engine.quit()
+        
     def __del__(self):
         try:
             self.matlab_engine.quit()

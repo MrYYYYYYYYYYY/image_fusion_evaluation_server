@@ -1,45 +1,391 @@
 task:
   multi-focus:
     dataset:
-      lytro:
+      test focus:
         root: ./dataset/multi-focus/lytro
-        ifmulti: 0
         double:
-          data: [lytro-001,lytro-002,lytro-003,lytro-004,lytro-005,
-                 lytro-006,lytro-007,lytro-008,lytro-009,lytro-010,
-                 lytro-011,lytro-012,lytro-013,lytro-014,lytro-015,
-                 lytro-016,lytro-017,lytro-018,lytro-019,lytro-020]
-          suffix: [-001.png, -002.png]
-    metrics: [ 'qmi', 'qte', 'qncie','qg']
-    #metrics: [ 'qmi', 'qte', 'qncie','qg', 'qm', 'qsf', 'qp','qs', 'qc', 'qy','qcv',
-    #             'viff','mef_ssim','ssim_a','fmi_edge', 'fmi_dct', 'fmi_w','nabf','scd','sd','sf', 'cc' ]
+          data: 
+           - lytro-001
+           - lytro-002
+           - lytro-003
+           - lytro-004
+          label: none
+          suffix:  ['-001.png','-002.png']
+        multiple: none
+        
+      mffw:
+        root: ./dataset/multi-focus/mffw
+        double:
+          data: 
+           - mffw-001
+           - mffw-002
+           - mffw-003
+           - mffw-004
+           - mffw-005
+           - mffw-006
+           - mffw-007
+           - mffw-008
+           - mffw-009
+           - mffw-010
+           - mffw-011
+           - mffw-012
+           - mffw-013
+          label: none
+          suffix:  ['-001.png','-002.png']
+        multiple: none
+        suffix: .png
+
+      mfif:
+        root: ./dataset/multi-focus/mfif
+        double:
+          data:
+            - mfif-001
+            - mfif-002
+            - mfif-003
+            - mfif-004
+            - mfif-005
+            - mfif-006
+            - mfif-007
+            - mfif-008
+            - mfif-009
+            - mfif-010
+            - mfif-011
+            - mfif-012
+            - mfif-013
+            - mfif-014
+            - mfif-015
+            - mfif-016
+            - mfif-017
+            - mfif-018
+            - mfif-019
+            - mfif-020
+            - mfif-021
+            - mfif-022
+            - mfif-023
+            - mfif-024
+            - mfif-025
+            - mfif-026
+            - mfif-027
+            - mfif-028
+            - mfif-029
+            - mfif-030
+          label: none
+          suffix:  ['-001.png','-002.png']
+        multiple: none
+        suffix: .png
+
+      mfifb:
+        root: ./dataset/multi-focus/mfifb
+        double:
+          data:
+          - mfifb-001
+          - mfifb-002
+          - mfifb-003
+          - mfifb-004
+          - mfifb-005
+          - mfifb-006
+          - mfifb-007
+          - mfifb-008
+          - mfifb-009
+          - mfifb-010
+          - mfifb-011
+          - mfifb-012
+          - mfifb-013
+          - mfifb-014
+          - mfifb-015
+          - mfifb-016
+          - mfifb-017
+          - mfifb-018
+          - mfifb-019
+          - mfifb-020
+          - mfifb-021
+          - mfifb-022
+          - mfifb-023
+          - mfifb-024
+          - mfifb-025
+          - mfifb-026
+          - mfifb-027
+          - mfifb-028
+          - mfifb-029
+          - mfifb-030
+          - mfifb-031
+          - mfifb-032
+          - mfifb-033
+          - mfifb-034
+          - mfifb-035
+          - mfifb-036
+          - mfifb-037
+          - mfifb-038
+          - mfifb-039
+          - mfifb-040
+          - mfifb-041
+          - mfifb-042
+          - mfifb-043
+          - mfifb-044
+          - mfifb-045
+          - mfifb-046
+          - mfifb-047
+          - mfifb-048
+          - mfifb-049
+          - mfifb-050
+          - mfifb-051
+          - mfifb-052
+          - mfifb-053
+          - mfifb-054
+          - mfifb-055
+          - mfifb-056
+          - mfifb-057
+          - mfifb-058
+          - mfifb-059
+          - mfifb-060
+          - mfifb-061
+          - mfifb-062
+          - mfifb-063
+          - mfifb-064
+          - mfifb-065
+          - mfifb-066
+          - mfifb-067
+          - mfifb-068
+          - mfifb-069
+          - mfifb-070
+          - mfifb-071
+          - mfifb-072
+          - mfifb-073
+          - mfifb-074
+          - mfifb-075
+          - mfifb-076
+          - mfifb-077
+          - mfifb-078
+          - mfifb-079
+          - mfifb-080
+          - mfifb-081
+          - mfifb-082
+          - mfifb-083
+          - mfifb-084
+          - mfifb-085
+          - mfifb-086
+          - mfifb-087
+          - mfifb-088
+          - mfifb-089
+          - mfifb-090
+          - mfifb-091
+          - mfifb-092
+          - mfifb-093
+          - mfifb-094
+          - mfifb-095
+          - mfifb-096
+          - mfifb-097
+          - mfifb-098
+          - mfifb-099
+          - mfifb-100
+          - mfifb-101
+          - mfifb-102
+          - mfifb-103
+          - mfifb-104
+          - mfifb-105
+          label: none
+          suffix:  ['-001.png','-002.png']
+        multiple: none
+        suffix: .png
+      
+      lytro_double:
+        root: ./dataset/multi-focus/lytro
+        double:
+          data:
+            - lytro-001
+            - lytro-002
+            - lytro-003
+            - lytro-004
+            - lytro-005
+            - lytro-006
+            - lytro-007
+            - lytro-008
+            - lytro-009
+            - lytro-010
+            - lytro-011
+            - lytro-012
+            - lytro-013
+            - lytro-014
+            - lytro-015
+            - lytro-016
+            - lytro-017
+            - lytro-018
+            - lytro-019
+            - lytro-020
+
+          label: none
+          suffix:  ['-001.png','-002.png']
+        multiple: none
+        suffix: .png
+
+    #metrics: [ 'qmi', 'qte', 'qncie','qg','sd','sf', 'cc']
+    metrics: [ 'qmi', 'qte', 'qncie','qg',  'qsf', 'qp','qs', 'qc', 'qy','qcv',
+                 'viff','mef_ssim','ssim_a','fmi_edge', 'fmi_dct', 'fmi_w','nabf','scd','sd','sf', 'cc' ]
 
   multi-exposure:
     dataset:
       mef:
         root: ./dataset/multi-exposure/mef
-        iftrip: 0
         double:
-          data: [cave, chairs, door, dragon]
-          suffix: [-A.png, -B.png]
-    metrics: [ 'qmi', 'qte', 'qncie','qg']
-    #metrics: [ 'qmi', 'qte', 'qncie','qg', 'qm', 'qsf', 'qp','qs', 'qc', 'qy','qcv',
-    #           'viff','mef_ssim','ssim_a','fmi_edge', 'fmi_dct', 'fmi_w','nabf','scd','sd','sf', 'cc' ]
+          data: 
+           - mef-001
+           - mef-002
+           - mef-003
+           - mef-004
+           - mef-005
+           - mef-006
+           - mef-007
+           - mef-008
+          label: none
+          suffix:  ['-001.png','-002.png']
+        multiple: none
+        suffix: .png
+
+      mefb:
+        root:
+        double:
+          data:
+            - mefb-002
+            - mefb-003
+            - mefb-004
+            - mefb-005
+            - mefb-006
+            - mefb-007
+            - mefb-008
+            - mefb-009
+            - mefb-010
+            - mefb-011
+            - mefb-012
+            - mefb-013
+            - mefb-014
+            - mefb-015
+            - mefb-016
+            - mefb-017
+            - mefb-018
+            - mefb-019
+            - mefb-020
+            - mefb-021
+            - mefb-022
+            - mefb-023
+            - mefb-024
+            - mefb-025
+            - mefb-026
+            - mefb-027
+            - mefb-028
+            - mefb-029
+            - mefb-030
+            - mefb-031
+            - mefb-032
+            - mefb-033
+            - mefb-034
+            - mefb-035
+            - mefb-036
+            - mefb-037
+            - mefb-038
+            - mefb-039
+            - mefb-040
+            - mefb-041
+            - mefb-042
+            - mefb-043
+            - mefb-044
+            - mefb-045
+            - mefb-046
+            - mefb-047
+            - mefb-048
+            - mefb-049
+            - mefb-050
+            - mefb-051
+            - mefb-052
+            - mefb-053
+            - mefb-054
+            - mefb-055
+            - mefb-056
+            - mefb-057
+            - mefb-058
+            - mefb-059
+            - mefb-060
+            - mefb-061
+            - mefb-062
+            - mefb-063
+            - mefb-064
+            - mefb-065
+            - mefb-066
+            - mefb-067
+            - mefb-068
+            - mefb-069
+            - mefb-070
+            - mefb-071
+            - mefb-072
+            - mefb-073
+            - mefb-074
+            - mefb-075
+            - mefb-076
+            - mefb-077
+            - mefb-078
+            - mefb-079
+            - mefb-080
+            - mefb-081
+            - mefb-082
+            - mefb-083
+            - mefb-084
+            - mefb-085
+            - mefb-086
+            - mefb-087
+            - mefb-088
+            - mefb-089
+            - mefb-090
+            - mefb-091
+            - mefb-092
+            - mefb-093
+            - mefb-094
+            - mefb-095
+            - mefb-096
+            - mefb-097
+            - mefb-098
+            - mefb-099
+            - mefb-100
+          label: none
+          suffix:  ['-001.png','-002.png']
+      multiple: none
+      suffix: .png
+    #metrics: [ 'qmi', 'qte', 'qncie','qg']
+    metrics: [ 'qmi', 'qte', 'qncie','qg',  'qsf', 'qp','qs', 'qc', 'qy','qcv',
+               'viff','mef_ssim','ssim_a','fmi_edge', 'fmi_dct', 'fmi_w','nabf','scd','sd','sf', 'cc' ]
   vis-ir:
     dataset:
-      roadscene:
-        root: ./dataset/vis-ir/roadscene
-        iftrip: 0
+      vifb:
+        root: ./dataset/vis-ir/vifb
         double:
-            data:
-              - FLIR_00006
-              - FLIR_00018
-              - FLIR_00060
-              - FLIR_00122
-            #vi->-A.png  ir->-B.png   
-            suffix: [-A.png, -B.png]
-    metrics: [ 'qmi', 'qte', 'qncie','qg']
-    #metrics: [ 'qmi', 'qte', 'qncie','qg', 'qm', 'qsf', 'qp','qs', 'qc', 'qy','qcv',
-    #           'viff','mef_ssim','ssim_a','fmi_edge', 'fmi_dct', 'fmi_w','nabf','scd','sd','sf', 'cc' ]
+          data:
+            - vifb-001
+            - vifb-002
+            - vifb-003
+            - vifb-004
+            - vifb-005
+            - vifb-006
+            - vifb-007
+            - vifb-008
+            - vifb-009
+            - vifb-010
+            - vifb-011
+            - vifb-012
+            - vifb-013
+            - vifb-014
+            - vifb-015
+            - vifb-016
+            - vifb-017
+            - vifb-018
+            - vifb-019
+            - vifb-020
+            - vifb-021
+          label: none
+          suffix:  ['-001.png','-002.png']
+        multiple: none
+        suffix: .png
+
+    #metrics: [ 'qmi', 'qte', 'qncie','qg']
+    #metrics: ['avgerage_gradient', 'cross_entropy','edge_intensity','entropy','mutual_information','psnr', 'qg','qcb','qcv''rmse', 'sf', 'ssim_a','sd']
+    metrics: [ 'qmi', 'qte', 'qncie','qg', 'qsf', 'qp','qs', 'qc', 'qy','qcv',
+               'viff','mef_ssim','ssim_a','fmi_edge', 'fmi_dct', 'fmi_w','nabf','scd','sd','sf', 'cc' ]
 
 call_back_url: 'http://49.233.180.165/fusion/c/submit/getEvaluateResultCallBack'

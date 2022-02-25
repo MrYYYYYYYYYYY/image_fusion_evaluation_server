@@ -72,13 +72,13 @@ class Evaluator(MatlabEngine):
         :return: q_values, list float
         """
         # Transfer RGB to Gray, it could be better to convert RGB to Gray before analyzing
-        if img1.ndim == 3:     # note bgr in cv2 or rgb in skimage and matlab
+        #if img1.ndim == 3:     # note bgr in cv2 or rgb in skimage and matlab
             # img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
             # img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
             # fused = cv2.cvtColor(fused, cv2.COLOR_BGR2GRAY)
-            img1 = rgb2gray(img1)
-            img2 = rgb2gray(img2)
-            fused = rgb2gray(fused)
+        img1 = rgb2gray(img1)
+        img2 = rgb2gray(img2)
+        fused = rgb2gray(fused)
 
         # Transfer numpy to mat
         img1_mat = self.np_to_mat(img1)
@@ -94,12 +94,12 @@ class Evaluator(MatlabEngine):
         q_values = {}
         for metric in metrics:
             print(metric)
-            q_values[metric] = round(self.__getattribute__('evaluate_by_'+metric)(img1=img1,
+            q_values[metric] = '%.5f' % self.__getattribute__('evaluate_by_'+metric)(img1=img1,
                                                                                           img2=img2,
                                                                                           fused=fused,
                                                                                           img1_mat=img1_mat,
                                                                                           img2_mat=img2_mat,
-                                                                                          fused_mat=fused_mat),5)
+                                                                                          fused_mat=fused_mat)
         return q_values
 
     # ******************************** Information Theory-Based Metric ******************************************
