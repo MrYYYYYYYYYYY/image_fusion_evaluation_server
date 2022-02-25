@@ -1,0 +1,3 @@
+# image_fusion_evaluation_server
+运行server.py开启服务
+config.yaml中配置不同任务的测试数据集
